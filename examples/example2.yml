@@ -18,9 +18,9 @@
         pvname: "/dev/vdb1"
         vgname: ApacheVG
         lvs:
-          - { lvname: logs_lv, size: 100M, fstype: "{{ fstype_OS }}", mntpoint: "/apache/logs", user: apache, group: apache }
-          - { lvname: soft_lv, size: 100M, fstype: "{{ fstype_OS }}", mntpoint: "/opt/apache/soft", user: apache, group: apache }
-          - { lvname: backups_lv, size: 52M, fstype: "{{ fstype_OS }}", mntpoint: "/apache/backups", user: apache, group: apache }
+          - { lvname: logs_lv, size: 100M, fstype: "{{ fstype_OS }}", mntpoint: "/apache/logs", user: apache, group: apache, mode: 770 }
+          - { lvname: soft_lv, size: 100M, fstype: "{{ fstype_OS }}", mntpoint: "/opt/apache/soft", user: apache, group: apache, mode: 770 }
+          - { lvname: backups_lv, size: 52M, fstype: "{{ fstype_OS }}", mntpoint: "/apache/backups", user: apache, group: apache, mode: 770 }
 
     - role: ansible-manage-lvm
       partion_disk: true

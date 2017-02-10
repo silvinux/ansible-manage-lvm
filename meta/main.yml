@@ -1,20 +1,26 @@
 ---
 galaxy_info:
   author: silvinux
-  description: User/Groups management (add/del)
+  description: 	LVM management (Partition/VG/LV/Permissions)
   company: N/A
   license: GPLv3
-  min_ansible_version: 1.9
+  min_ansible_version: 2.2
   platforms:
   - name: EL
     versions:
-    - all
+    - 5
+    - 6
+    - 7
   galaxy_tags:
-    - useradd
-    - groupadd
-    - userdel
-    - groupdel
-    - usermod
-    - user-management
-    - group-management
+    - parted
+    - fdisk
+    - partitioning
+    - lvm
+    - LogicalVolume
+    - VolumeGroup
+    - vg
+    - lv
+    - filesystem
+    - permissions
+
 dependencies: []
