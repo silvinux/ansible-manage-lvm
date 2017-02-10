@@ -13,7 +13,7 @@ Available variables are listed below, along with default values:
 
 ### Create partition table and primary disk partition
 Should I create a patition table or partition the disk?<br />
-partion_disk: false
+partion_disk: false<br />
 label: msdos
 
 ### Default parted optimization
