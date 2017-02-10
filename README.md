@@ -31,13 +31,8 @@ fs_manage: false
 ### Load Profile - VG/LV
 profile: empty
 
-### Filesystem type depend on RHEL mayor version or you can set with variable
-fstype_OS: 
-
-"{% if ansible_distribution_major_version >= '7' %}xfs <br />
-{% elif ansible_distribution_major_version == '6' %}ext4 <br />
-{% else %}ext3 <br />
-{% endif %}"<br />
+### Filesystem type depend on RHEL mayor version 
+fstype_OS: rhel7-xfs/rhel6-ext4/rhel5-ext3  - or you can set with variable
 
 ### Profile example
         profile: list_name	
