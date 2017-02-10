@@ -24,9 +24,9 @@ partitions:
   - {'partition_type': 'primary', 'start_point': '0%', 'end_point': '100%'}
 
 ### Activate/Deactivate create VG/LV - fs manage
-create_vg: false
-create_lv: false
-fs_manage: false
+create_vg: false<br />
+create_lv: false<br />
+fs_manage: false<br />
 
 ### Load Profile - VG/LV
 profile: empty
