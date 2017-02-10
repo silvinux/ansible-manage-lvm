@@ -12,7 +12,7 @@ This role requires Ansible 2.2 or higher, and platform requirements are listed i
 Available variables are listed below, along with default values:
 
 ### Create partition table and primary disk partition
-Should I create a patition table or partition the disk?.
+Should I create a patition table or partition the disk?<br />
 partion_disk: false
 label: msdos
 
