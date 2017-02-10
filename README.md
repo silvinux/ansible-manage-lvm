@@ -3,27 +3,27 @@
 
 This role is able to create a disk partition, add it to VG, create an LV, mount the fs and add permissions. Use booleans to activate/deactivate functions.
 
-## Requirements
+### Requirements
 
 This role requires Ansible 2.2 or higher, and platform requirements are listed in the metadata file.
 
-## Role Variables
+### Role Variables
 
 Available variables are listed below, along with default values:
 
-## Should I create a patition table or partition the disk?
-# Create partition table and primary disk partition
+### Create partition table and primary disk partition
+Should I create a patition table or partition the disk?
 partion_disk: false
 label: msdos
 
-# Default parted optimization
+### Default parted optimization
 parted_optimization: optimal
 
-# Disk partitioning - whole size
+### Disk partitioning - whole size
 partitions:
   - {'partition_type': 'primary', 'start_point': '0%', 'end_point': '100%'}
 
-## Activate/Deactivate create VG/LV - fs manage
+### Activate/Deactivate create VG/LV - fs manage
 create_vg: false
 create_lv: false
 fs_manage: false
@@ -31,7 +31,7 @@ fs_manage: false
 ### Load Profile - VG/LV
 profile: empty
 
-## Filesystem type depend on RHEL mayor version
+### Filesystem type depend on RHEL mayor version
 fstype_OS: "{% if ansible_distribution_major_version >= '7' %}xfs{% elif ansible_distribution_major_version == '6' %}ext4{% else %}ext3{% endif %}"
 
 ### Profile example
@@ -44,12 +44,12 @@ fstype_OS: "{% if ansible_distribution_major_version >= '7' %}xfs{% elif ansible
             - { lvname: fs01_lv, size: 60G, fstype: "{{ fstype_OS }}", mntpoint: "/fs01", user: user, group: user }
             - { lvname: fs02_lv, size: 10G, fstype: "{{ fstype_OS }}", mntpoint: "/fs01/fs02", user: user, group: user }
 
-## Dependencies
+### Dependencies
 There is no dependencies with other roles.
 
-## Examples Playbook
+### Examples Playbook
 1. Create filesystem structure for weblogic server. 
 2. Create filesystem structure for weblogic and apache server, using the same role twice.
  
-## License
+### License
 GPLv3
