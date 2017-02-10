@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: silvinux
-  description: 	LVM management - Partition VG LV Permissions
+  description: 	LVM management
   company: N/A
   license: GPLv3
   min_ansible_version: 2.2
